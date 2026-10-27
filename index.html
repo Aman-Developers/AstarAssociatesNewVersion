@@ -1,455 +1,251 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Star Associates</title>
-  <!-- STYLE SHEET -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- icon -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- FONT ASSOM -->
-    <script src="https://kit.fontawesome.com/459a147653.js" crossorigin="anonymous"></script>
-    <!-- bootstrap -->
-   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> -->
-   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-
-        <!-- FAVICON -->
-<link rel="apple-touch-icon" sizes="180x180" href="images1/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images1/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images1/favicon-32x32.png">
-<link rel="manifest" href="images1/favicon-32x32.png">
-
-  </head>
-
-  <style>
-
-    /* @media only screen and (max-width: 500px){
-
-    #top-section {
-    width: 100%;
-    height: 80%;
-    margin-top:10px;
-    border-radius: 30%;
-
-      }
-
-    } */
-
-
-@media only screen and (max-width: 500px){
-
-html{
-  font-size: 50%;
-}
-
-.home img {
-width: 350px;
-height: 500px;
-border-radius: 50px;
-/* margin-top: 20px; */
-}
-
-#about-section img{
-width: 300px;
-height: 250px;
-border-radius: 50px;
-margin-top: 20px;
-}
-.video{
-  height: 250px;
-}
-#video1{
-  display: none;
-}
-
-.home{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images1/intro.svg);
-    background-size: cover;
-}
-
-.c-services__item p{
-  font-size:1.3rem;
-}
-
-.c-services__item h3{
-  font-size:2rem;
-}
-    }
-
-    
-
-    /* .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
-.content {
-    background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 20px;
-    /* max-width: 600px; */
-    width: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    font-size: 1.7rem;
-    font-family: 'poppins', sans-serif;
-
-}
-
-.left, .middle, .right {
-    flex: 1;
-    text-align: center;
-}
-
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .left, .middle, .right {
-        flex: none;
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astar Associates | Transforming Thoughts Into Reality</title>
+    <meta name="description" content="Astar Associates — a complete construction revolution. Layouts, civil and structural engineering, interior design, contracting and architecture in Hyderabad, Telangana.">
+    <meta name="theme-color" content="#05090C">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="js/script.js" defer></script>
+</head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-   <header class="header">
-  <!-- <a class="navbar-brand logo" href="#">
-    <img src="images/bellecosmetic-01.png" width="50" height="50" class="d-inline-block align-text-top" alt="">
-    Belle Cosmetic
-  </a> -->
-
-  <div class="container-fluid">
-    <a class="navbar-brand logo" href="index.html">
-      <img src="images1/navbar-updated-logo.png" alt=""  class="d-inline-block align-text-top">
-
-    </a>
-   
-  </div>
-
-   <i class='bx bx-menu' id="menu-icon"></i>
-
-
-            <!-- <nav class="navbar">
-              <a href="#home" class="active">Home</a>
-              <a href="about.html">About</a>
-              <a id="drpbtn" href="services.html">Services</a>
-              <a href="offers.html">Offers</a>
-              <a href="contact.html">Contact</a>
-              <a href="#" id="arabic">العربية</a>
-        
-              <a href="" class="btn" style="color: #fff; font-size: 12px; padding: 8px;">Book Your Consultation</a>
-            </nav> -->
-
-
-            
-<nav class="navbar">
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About</a>
-  
-  <!-- Wrap the Services link in a dropdown container -->
-  <!-- <div class="dropdown">
-    <a id="drpbtn" href="services.html">Services <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-    <div class="dropdown-content">
-      <a href="services.html">Botox</a>
-      <a href="services.html">Fillers<i class="fa-sharp fa-solid fa-caret-down"></i></a>
-      <a href="services.html">Fine Thread Lifting</a>
-      <a href="services.html">Beauty Therapies</a>
-      <a href="services.html">Dermatological Treatments</a>
-      <a href="services.html">Hair Laser Removal Treatment</a>
-      <a href="services.html">Body Treatments</a>
-      <a href="services.html">Hair Re-Growth Treatment</a>
-    </div>
-  </div> -->
-  <a href="our-team.html">Our Team</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-  <!-- <a href="#" id="arabic">العربية</a> -->
-  <!-- <a href="https://wa.me/+919030628100" class="btn" style="color: #fff; font-size: 10px;">Book Your Consultation</a> -->
-
-</nav>
-  </header> 
-
-  <section class="home" id="home">
-    <div class="home-content">
-      <p style="margin-top: 50px; color: #7D0A0A; font-size: 20px; padding-bottom: 10px;"><b>Transforming Thoughts, Into Reality</b></p>
-      <!-- <h1 style="font-family: 'Lobster', cursive;">Belle Cosmetic Clinic</h1>  -->
-      
-      <h3 style="padding-bottom: 10px;">Provide Services <span class="multiple-text"></span></h3>
-      <p> Welcome to A Star Associates a Complete Construction Revolution - Where Dreams Take Shape!your trusted partner in construction services.
-         With years of experience and a commitment to excellence, we take pride in delivering top-notch construction solutions for a wide range of projects. Choosing us means
-          opting for reliability, quality, and a seamless construction journey. Here are some compelling reasons why we are the ideal choice for all your construction needs</p>
-     
-      <div class="social-media">
-        <!-- <a href="#"><i class='bx bxl-facebook-circle'></i></a> -->
-        <a href="https://wa.me/+919030628100" class="fa-brands fa-whatsapp"></a>
-
-        <a href="https://www.instagram.com/astar_associates?igsh=NTc4MTIwNjQ2YQ=="><i class='bx bxl-instagram-alt' ></i></a>
-        <!-- <a href="#"><i class="fa-brands fa-threads"></i></a> -->
-        <!-- <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square' ></i></a> -->
-
-      </div>
-       <a href="https://wa.me/+919030628100" class="btn">Get in Touch</a>
-    </div>
-
-    <!-- IMAGE AADD KARNA HAI -->
-    <div class="home-img">
-      <!-- height="400" width="400" -->
-      <img src="images1/indeximgnew.png" alt=""> 
-    </div>
-    
-  </section>
-
-
-
-  <!-- About us section -->
-  <!-- <div class="contact-strip" style="height: 200px; display: flex; align-items: center; background-color: aqua;">
-
-  <a href="tel:+919030628100" style="padding-left: 50px; font-size: 30px; margin-top: 80px;">+919030628100</a> 
-
-  <div class="fa-solid fa-phone fa-beat" style="--fa-beat-scale: 1.5; text-align: center; font-size: 50px; margin-bottom: 55px; display: grid;">
-  </div> -->
-
-  <div class="container">
-    <div class="content">
-        <div class="left">
-            <p><a href="tel:+919030628100" style="font-size: 20px">+91 9030628100</a> </p>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Astar Associates home">
+                <img src="assets/logo/astar-associates-logo.png" alt="Astar Associates — A Complete Construction Revolution" width="335" height="64">
+            </a>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a class="nav-link is-active" aria-current="page" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li><a class="nav-link" href="team.html">Team</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary nav-cta-mobile" href="https://wa.me/919030628100?text=Hello%20Astar%20Associates%2C%20I%27d%20like%20a%20quote%20for%20my%20project." target="_blank" rel="noopener">Get a Quote <span class="icon-arrow" data-icon="arrow-right"></span></a>
+            </nav>
+            <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/919030628100?text=Hello%20Astar%20Associates%2C%20I%27d%20like%20a%20quote%20for%20my%20project." target="_blank" rel="noopener">Get a Quote <span class="icon-arrow" data-icon="arrow-right"></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <a href="tel:+919030628100"><div  class="middle fa-solid fa-phone fa-beat" style="--fa-beat-scale: 1.5;font-size: 30px;">
-            <!-- <img src="phone-icon.png" alt="Phone Icon"> -->
-        </div></a>
-        <div class="right">
-            <p>Transforming Thoughts, Into Reality</p>
+    </header>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero" data-hero-slider aria-label="Welcome">
+            <div class="hero-media">
+                <img class="hero-slide is-active" src="assets/home/hero-dusk-residence.jpg" alt="Residential building elevation design by Astar Associates, lit at dusk" data-caption="Residential Elevation — Design" width="1024" height="775">
+                <img class="hero-slide" src="assets/home/hero-jalsa-regency-night.jpg" alt="Jalsa Regency apartment building at night" data-caption="Jalsa Regency — Night View" width="1024" height="768">
+                <img class="hero-slide" src="assets/home/hero-night-corner-building.jpg" alt="Completed multi-storey corner building with facade lighting at night" data-caption="Completed Building — Night View" width="1536" height="1152">
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <p class="section-label">Welcome to Astar Associates</p>
+                    <h1 class="hero-title">
+                        <span>Transforming</span>
+                        <span>Thoughts,</span>
+                        <span class="text-gold">Into Reality.</span>
+                    </h1>
+                    <p class="hero-text">At Astar Associates, we deliver high-quality construction solutions with a commitment to safety, innovation and timely delivery. We build spaces that inspire.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="contact.html">Get in Touch <span class="icon-arrow" data-icon="arrow-right"></span></a>
+                        <a class="btn btn-outline" href="tel:+919030628100"><span data-icon="phone"></span> +91 9030628100</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-footer">
+                <div class="container">
+                    <div class="slide-controls" aria-label="Choose slide">
+                        <button class="slide-dot is-active" type="button" aria-current="true" aria-label="Show slide 1">01</button>
+                        <button class="slide-dot" type="button" aria-label="Show slide 2">02</button>
+                        <button class="slide-dot" type="button" aria-label="Show slide 3">03</button>
+                        <span class="slide-progress" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="hero-caption">
+                        <small>Our Work</small>
+                        <strong data-hero-caption aria-live="polite">Residential Elevation — Design</strong>
+                        <a href="gallery.html">View Gallery <span data-icon="arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="section section-light" aria-labelledby="why-title">
+            <div class="container">
+                <div class="why-grid">
+                    <div data-reveal>
+                        <p class="section-label">Why Choose Us</p>
+                        <h2 class="section-title" id="why-title">Built on Trust.<br><span class="text-gold">Driven by Excellence.</span></h2>
+                        <p class="section-text">At Astar Associates, we focus on delivering reliable, high-quality construction solutions with a customer-centric approach. Our commitment to excellence ensures a smooth and hassle-free construction journey from start to finish.</p>
+                    </div>
+                    <div class="why-media" data-reveal>
+                        <img src="assets/home/why-choose-us-building.jpg" alt="Multi-storey apartment building elevation designed by Astar Associates" width="958" height="1000" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-icon" data-icon="users"></span>
+                        <h3>Experience and Expertise</h3>
+                        <p>Years of industry knowledge and skilled professionals.</p>
+                    </article>
+                    <article class="feature-card delay-1" data-reveal>
+                        <span class="feature-icon" data-icon="leaf"></span>
+                        <h3>Sustainable Practices</h3>
+                        <p>We focus on eco-friendly and responsible construction methods.</p>
+                    </article>
+                    <article class="feature-card delay-2" data-reveal>
+                        <span class="feature-icon" data-icon="message"></span>
+                        <h3>Transparent Communication</h3>
+                        <p>Clear and honest communication at every stage.</p>
+                    </article>
+                    <article class="feature-card delay-3" data-reveal>
+                        <span class="feature-icon" data-icon="shield-check"></span>
+                        <h3>Emphasis on Safety</h3>
+                        <p>We maintain high safety standards on all projects.</p>
+                    </article>
+                    <article class="feature-card delay-4" data-reveal>
+                        <span class="feature-icon" data-icon="star"></span>
+                        <h3>Client Satisfaction</h3>
+                        <p>Our clients' trust and satisfaction always come first.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR SERVICES -->
+        <section class="section services-section section-dark" aria-labelledby="services-title">
+            <img class="services-bg" src="assets/about/site-work.jpg" alt="" loading="lazy">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="section-label">Our Services</p>
+                        <h2 class="section-title" id="services-title">Complete <span class="text-gold">Construction Solutions</span></h2>
+                        <p class="section-text">We provide end-to-end construction and design solutions for residential, commercial and industrial projects.</p>
+                    </div>
+                    <a class="btn btn-outline-gold btn-sm" href="services.html">View Service Details <span class="icon-arrow" data-icon="arrow-right"></span></a>
+                    <a class="btn btn-outline-gold btn-sm" href="contact.html#enquiry">Enquire About a Service <span class="icon-arrow" data-icon="arrow-right"></span></a>
+                </div>
+
+                <div class="services-grid">
+                    <a class="service-card" href="contact.html?service=Layouts#enquiry" data-reveal>
+                        <div class="service-media"><img src="assets/home/service-layouts.jpg" alt="Developed plot with compound wall and lawn" width="640" height="400" loading="lazy"></div>
+                        <div class="service-body">
+                            <span class="service-icon" data-icon="layout-map"></span>
+                            <div>
+                                <h3>Layouts</h3>
+                                <p>Well-planned layouts for residential and commercial projects.</p>
+                            </div>
+                            <span class="circle-btn" aria-hidden="true"><span data-icon="arrow-right"></span></span>
+                        </div>
+                    </a>
+                    <a class="service-card delay-1" href="contact.html?service=Civil%20Engineers#enquiry" data-reveal>
+                        <div class="service-media"><img src="assets/home/service-civil-engineers.jpg" alt="Stilt floor with columns and new floor tiling on site" width="800" height="500" loading="lazy"></div>
+                        <div class="service-body">
+                            <span class="service-icon" data-icon="hard-hat"></span>
+                            <div>
+                                <h3>Civil Engineers</h3>
+                                <p>Reliable civil engineering solutions with quality and precision.</p>
+                            </div>
+                            <span class="circle-btn" aria-hidden="true"><span data-icon="arrow-right"></span></span>
+                        </div>
+                    </a>
+                    <a class="service-card delay-2" href="contact.html?service=Structural%20Engineers#enquiry" data-reveal>
+                        <div class="service-media"><img src="assets/home/service-structural-engineers.jpg" alt="Completed multi-storey residential building" width="800" height="500" loading="lazy"></div>
+                        <div class="service-body">
+                            <span class="service-icon" data-icon="building"></span>
+                            <div>
+                                <h3>Structural Engineers</h3>
+                                <p>Strong and safe structures designed for long-term durability.</p>
+                            </div>
+                            <span class="circle-btn" aria-hidden="true"><span data-icon="arrow-right"></span></span>
+                        </div>
+                    </a>
+                    <a class="service-card" href="contact.html?service=Interior%20Designers#enquiry" data-reveal>
+                        <div class="service-media"><img src="assets/home/service-interior-designers.jpg" alt="Granite-clad lift lobby at Jalsa Regency" width="800" height="500" loading="lazy"></div>
+                        <div class="service-body">
+                            <span class="service-icon" data-icon="sofa"></span>
+                            <div>
+                                <h3>Interior Designers</h3>
+                                <p>Creative and functional interior spaces tailored to your needs.</p>
+                            </div>
+                            <span class="circle-btn" aria-hidden="true"><span data-icon="arrow-right"></span></span>
+                        </div>
+                    </a>
+                    <a class="service-card delay-1" href="contact.html?service=Contractors#enquiry" data-reveal>
+                        <div class="service-media"><img src="assets/home/service-contractors.jpg" alt="Completed independent house with finished facade" width="800" height="500" loading="lazy"></div>
+                        <div class="service-body">
+                            <span class="service-icon" data-icon="wrench"></span>
+                            <div>
+                                <h3>Contractors</h3>
+                                <p>Efficient project execution with timely delivery.</p>
+                            </div>
+                            <span class="circle-btn" aria-hidden="true"><span data-icon="arrow-right"></span></span>
+                        </div>
+                    </a>
+                    <a class="service-card delay-2" href="contact.html?service=Architects#enquiry" data-reveal>
+                        <div class="service-media"><img src="assets/home/service-architects.jpg" alt="Architectural elevation design of a multi-storey building" width="800" height="499" loading="lazy"></div>
+                        <div class="service-body">
+                            <span class="service-icon" data-icon="compass"></span>
+                            <div>
+                                <h3>Architects</h3>
+                                <p>Innovative and modern architectural designs that inspire.</p>
+                            </div>
+                            <span class="circle-btn" aria-hidden="true"><span data-icon="arrow-right"></span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <a class="footer-brand" href="index.html" aria-label="Astar Associates home">
+                <img src="assets/logo/astar-associates-logo.png" alt="Astar Associates — A Complete Construction Revolution" width="335" height="64" loading="lazy">
+            </a>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <ul class="social-list">
+                <li><a href="https://www.instagram.com/astar_associates?igsh=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Astar Associates on Instagram"><span data-icon="instagram"></span></a></li>
+                <li><a href="https://wa.me/919030628100" target="_blank" rel="noopener" aria-label="Chat with Astar Associates on WhatsApp"><span data-icon="whatsapp"></span></a></li>
+            </ul>
         </div>
-    </div>
-</div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span data-year>2025</span> Astar Associates. All rights reserved.</p>
+                <div class="footer-contact">
+                    <a href="tel:+919030628100"><span data-icon="phone"></span>+91 9030628100</a>
+                    <a href="mailto:astarassociates@yahoo.in"><span data-icon="mail"></span>astarassociates@yahoo.in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <!-- WHY CHOOSE US SECTION -->
-  
-  <section class="about" id="about-section">
-
-    <div class="about-img" style="height: 200px;">
-      <video class="video" src="images1/video1.mp4" autoplay loop controls muted height="300px" width=""></video>
-    
-
-      <!-- <div class="changing-img" >
-        <img class="auto-image" src="images/botox 1.jpg" />
-        <img class="auto-image" src="images/botox 2.jpg" />
-        <img class="auto-image" src="images/botox 3.jpg" />
-      </div>
-      <img src="" class="dummy-img" alt="" height="0"> -->
-    </div>
-
-    <!-- <div class="about-img" id="video1" style="height: 200px;">
-      <video src="images1/new-video-compressed.mp4" autoplay loop controls muted height="300px" width=""></video>
-  
-    </div> -->
-
-    
-
-    <div class="about-content">
-      <h2 class="heading">Why Choose <span>Us</span></h2>
-      <!-- <h3 style="color: #b58d31;font-family: 'Lobster', cursive;">Belle Cosmetic Clinic</h3> -->
-      <p>Your trusted partner in construction services. With years of experience and a commitment to excellence, we take pride in delivering 
-        top-notch construction solutions for a wide range of projects. Choosing us means opting for reliability, quality,
-         and a seamless construction journey. Here are some compelling reasons why we are the ideal choice for all your construction needs..</p>
-    <a href="about.html" class="btn">Read More</a>
-    </div>
-  </section>
-
-
-
-  <!-- SERVICE SECTION -->
-  
-
-<a href=""> <section class="c-section" style="margin-top: 50px;">
-  <h2 class="c-section__title"><span>Our Services</span></h2>
-  <ul class="c-services">
-      <li class="c-services__item">
-      <h3>Layouts</h3>
-      <p>Explore our thoughtfully crafted layouts, blending form and function seamlessly. Designed for optimal living or working spaces, our layouts prioritize comfort and efficiency. Each plan is a blueprint for a harmonious lifestyle, showcasing our commitment to creating spaces that align with your needs and aspirations. Experience thoughtful design, redefined.</p>
-      </li>
-      
-      <li class="c-services__item">
-      <h3>Civil Engineers</h3>
-        <p>Meet our skilled civil engineers dedicated to transforming ideas into reality. With expertise in infrastructure design and construction management, our team ensures precision and reliability in every project. Trust us to build the future, one foundation at a time. Explore our commitment to excellence in civil engineering solutions. </p> 
-        </li>
-      <li class="c-services__item">
-      <h3>Structural Engineers</h3>
-      <p>Empower your projects with the expertise of our structural engineers. Meticulously analyzing and fortifying designs, we ensure the strength and stability of every structure. From skyscrapers to bridges, our team combines innovation and precision to lay the groundwork for a resilient and enduring built environment. Elevate your engineering aspirations with us.</p>
-      </li>
-      <li class="c-services__item">
-      <h3>Interior Designers</h3>
-      <p>Step into a world of personalized interiors with our talented designers. We transform spaces into reflections of your style, combining functionality with beauty. From concept to creation, our team crafts inviting environments that resonate with your vision. Let us turn your dreams into a harmonious reality, one room at a time.</p>
-      </li>
-      <li class="c-services__item">
-      <h3>Contractors</h3>
-      <p>Embark on your construction journey with our trusted contractors. We bring visions to life, managing projects with efficiency and integrity. From concept to completion, our dedicated team ensures quality craftsmanship and timely delivery. Experience seamless collaboration and turnkey solutions – building the future, simplifying your construction goals with us.</p>
-      </li>
-      <li class="c-services__item">
-        <!-- <i class='bx bxs-shield-plus' style="font-size: 50px;"></i> -->
-      <h3>Architects</h3>
-      <p>Discover the artistry of our architects, weaving innovation and aesthetics into every design. With a passion for creating spaces that inspire, our team crafts visionary structures that stand the test of time. Elevate your surroundings with our architectural expertise, where imagination meets precision in every blueprint. </p>
-      </li>
-  </ul>
-  </section></a>
-  
-
-  <!-- PORTFOLIO SECTION -->
-    <!-- <section class="portfolio" id="portfolio">
-    <h2 class="heading"><span>Gallery</span></h2>
-    
-    <div class="portfolio-container">
-        <div class="portfolio-box">
-        <a href="gallery.html"> <img src="images/skin-care3.jpg" alt=""></a>  -->
-          <!-- <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta beatae laborum blanditiis aliquam incidunt pariatur ipsam ipsa, natus ad earum tempora ex repudiandae amet reprehenderit magni dolorem, voluptatibus corrupti voluptate?</p>
-            <a href=""><i class='bx bx-link-external'></i></a>
-          </div> -->
-        <!-- </div>
-
-        <div class="portfolio-box">
-          <a href="gallery.html"> <img src="images/skin-care4.jpg" alt=""></a>  -->
-          <!-- <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta beatae laborum blanditiis aliquam incidunt pariatur ipsam ipsa, natus ad earum tempora ex repudiandae amet reprehenderit magni dolorem, voluptatibus corrupti voluptate?</p>
-            <a href=""><i class='bx bx-link-external'></i></a>
-          </div> -->
-        <!-- </div>
-
-        <div class="portfolio-box">
-          <a href="gallery.html">   <img src="images/laser1.jpg" alt=""></a>  -->
-          <!-- <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta beatae laborum blanditiis aliquam incidunt pariatur ipsam ipsa, natus ad earum tempora ex repudiandae amet reprehenderit magni dolorem, voluptatibus corrupti voluptate?</p>
-            <a href=""><i class='bx bx-link-external'></i></a>
-          </div> -->
-        <!-- </div>
-
-        <div class="portfolio-box">
-          <a href="gallery.html"> <img src="images/threadlift2.jpg" alt=""></a>  -->
-          <!-- <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta beatae laborum blanditiis aliquam incidunt pariatur ipsam ipsa, natus ad earum tempora ex repudiandae amet reprehenderit magni dolorem, voluptatibus corrupti voluptate?</p>
-            <a href=""><i class='bx bx-link-external'></i></a>
-          </div> -->
-        <!-- </div>
-
-        <div class="portfolio-box">
-          <a href="gallery.html"> <img src="images/botox 3.jpg" alt=""></a>  -->
-          <!-- <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta beatae laborum blanditiis aliquam incidunt pariatur ipsam ipsa, natus ad earum tempora ex repudiandae amet reprehenderit magni dolorem, voluptatibus corrupti voluptate?</p>
-            <a href=""><i class='bx bx-link-external'></i></a>
-          </div> -->
-        <!-- </div>
-
-        <div class="portfolio-box">
-          <a href="gallery.html"> <img src="images/body-treatment1.jpg" alt=""></a>  -->
-          <!-- <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta beatae laborum blanditiis aliquam incidunt pariatur ipsam ipsa, natus ad earum tempora ex repudiandae amet reprehenderit magni dolorem, voluptatibus corrupti voluptate?</p>
-            <a href=""><i class='bx bx-link-external'></i></a>
-          </div> -->
-        <!-- </div>
-    </div>
-   </section> -->
-
-
-
-   <!-- footer  -->
-   
-      <!-- <footer class="footer" style="background: var(--bg-color);">
-      <div class="footer-text">
-        <p>Copyrights &copy; 2023 by Ahmed's Digital Studio | All Rights Reserved</p>
-      </div>
-
-      <div class="footer-icon">
-        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-      </div>
-
-    </footer> -->
-
-
-    
-<section1  id="footer">
-  <div class="main-footer">
-    <div class="logoinfo" data-aos="fade-up">
-      <div class="contact-details">
-        <h1>Contact Us</h1>
-        <li>
-          <div class="fa-solid fa-phone"></div><a href="tel:+919030628100" style="padding-left: 15px;">+91 9030628100</a></li>
-        <li>
-          <div class="fa-solid fa-envelope"></div><a href="astarassociates@yahoo.in" style="padding-left: 15px ;">astarassociates@yahoo.in</a></li>
-          <li>
-            <div class="fa-solid fa-location-dot"></div><a href="https://maps.app.goo.gl/WzbTyS68XJaE9fzK7"  style="padding-left: 15px;">East Maruti Nagar, Hyderabad.</a></li>
-        
-    </div>
-  </div>
-  <div class="com " data-aos="fade-up">
-    <h1>About</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="our-team.html">Our Team</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  <div class="info" data-aos="fade-up">
-    <h1>Social Media</h1>
-    <div class="sociallogos">
-      <div class="logobox social-media">
-        <a href="https://www.instagram.com/astar_associates?igsh=NTc4MTIwNjQ2YQ==" class="fa fa-instagram"></a>
-        <!-- <a href="#" class="bx bxl-facebook-circle"></a> -->
-        <!-- <a href="#" class="fa-brands fa-threads"></a> -->
-        <a href="https://wa.me/+919030628100" class="fa-brands fa-whatsapp"></a>
-      </div>
-    </div>
-  </div>
-  </div>
-<footer>Copyrights &copy; 2024 by Astar Associates | All Rights Reserved | <br> <a href=""></a></footer>
-</section1>
-
-    <a href="https://wa.me/+919030628100"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a>
-
-
-    <!-- scroll revial -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- typed js -->
-
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- script section -->
-    <script src="script.js"></script>
-
-
-
-</body> 
+    <a class="whatsapp-float" href="https://wa.me/919030628100" target="_blank" rel="noopener" aria-label="Chat with Astar Associates on WhatsApp"><span data-icon="whatsapp"></span></a>
+</body>
 </html>

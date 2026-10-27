@@ -1,300 +1,310 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Star Associates</title>
-  <!-- STYLE SHEET -->
-  <!-- <link rel="stylesheet" href="offers.css"> -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- icon -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- FONT ASSOM -->
-    <script src="https://kit.fontawesome.com/459a147653.js" crossorigin="anonymous"></script>
-    <!-- bootstrap -->
-   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> -->
-   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astar Associates | Our Work &amp; Projects</title>
+    <meta name="description" content="Explore Astar Associates project photos, elevation designs and walkthrough videos — residential buildings, interiors, finishes and site development.">
+    <meta name="theme-color" content="#05090C">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="js/script.js" defer></script>
 </head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Astar Associates home">
+                <img src="assets/logo/astar-associates-logo.png" alt="Astar Associates — A Complete Construction Revolution" width="335" height="64">
+            </a>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link is-active" aria-current="page" href="gallery.html">Gallery</a></li>
+                    <li><a class="nav-link" href="team.html">Team</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary nav-cta-mobile" href="https://wa.me/919030628100?text=Hello%20Astar%20Associates%2C%20I%27d%20like%20a%20quote%20for%20my%20project." target="_blank" rel="noopener">Get a Quote <span class="icon-arrow" data-icon="arrow-right"></span></a>
+            </nav>
+            <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/919030628100?text=Hello%20Astar%20Associates%2C%20I%27d%20like%20a%20quote%20for%20my%20project." target="_blank" rel="noopener">Get a Quote <span class="icon-arrow" data-icon="arrow-right"></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="nav-backdrop" aria-hidden="true"></div>
 
-<style>
- section {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    <main id="main">
+        <!-- GALLERY HERO -->
+        <section class="page-hero" aria-label="Our gallery">
+            <div class="hero-media">
+                <img src="assets/gallery/gallery-hero.jpg" alt="Multi-storey building by Astar Associates with facade lighting at night" width="1536" height="1152">
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <p class="section-label">Our Gallery</p>
+                    <h1 class="hero-title">
+                        <span>A Glimpse of</span>
+                        <span class="text-gold">Our Work</span>
+                    </h1>
+                    <p class="hero-text">Explore some of our completed projects and see the quality, precision and care we bring to every construction project.</p>
+                </div>
+            </div>
+        </section>
 
-/* section.new-offers {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-} */
+        <!-- FILTER + GRID -->
+        <section class="section section-white" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 class="visually-hidden" id="gallery-title">Project gallery</h2>
 
-.img-box2 {
-  width: 158px;
-  height: 280px;
-  grid-column: span 2;
-  animation: rotate 30s infinite ease-in forwards alternate;
-  transition: all 0.25s ease-in;
-  /* margin: 50px 25px; */
-  box-shadow: 0 0 10px 2px #feba00;
-  /* margin-right: 150px; */
+                <!-- Category buttons with no tagged items are hidden automatically by js/script.js.
+                     To add an item to a category, add the category key to its data-category attribute
+                     (residential, commercial, industrial, interiors, structural, layouts). -->
+                <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All Projects</button>
+                    <button class="filter-btn" type="button" data-filter="residential" aria-pressed="false">Residential</button>
+                    <button class="filter-btn" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
+                    <button class="filter-btn" type="button" data-filter="industrial" aria-pressed="false">Industrial</button>
+                    <button class="filter-btn" type="button" data-filter="interiors" aria-pressed="false">Interiors</button>
+                    <button class="filter-btn" type="button" data-filter="structural" aria-pressed="false">Structural Work</button>
+                    <button class="filter-btn" type="button" data-filter="layouts" aria-pressed="false">Layouts</button>
+                </div>
 
-}
+                <div class="gallery-grid">
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-wooden-facade.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-wooden-facade.jpg" alt="Completed residence with wood-finish cladding, jali screen panel and red granite steps" width="1024" height="1536">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential commercial" data-src="assets/gallery/hayath-heights.jpg" data-title="Hayath Heights" aria-label="View larger: Hayath Heights">
+                        <img src="assets/gallery/hayath-heights.jpg" alt="Hayath Heights, a green and cream building with two ground-floor shop shutters" width="1118" height="1407">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Hayath Heights</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential commercial" data-src="assets/gallery/dar-ul-emaan.jpg" data-title="Dar Ul Emaan" aria-label="View larger: Dar Ul Emaan">
+                        <img src="assets/gallery/dar-ul-emaan.jpg" alt="Dar Ul Emaan, a cream building with classical mouldings, a carved entrance gate and a shop shutter" width="1110" height="1417">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Dar Ul Emaan</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/corner-apartment-building.jpg" data-title="Completed Apartment Building" aria-label="View larger: Completed Apartment Building">
+                        <img src="assets/gallery/corner-apartment-building.jpg" alt="Completed corner apartment building with jali panels and ornamental gates" width="1086" height="1448">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Apartment Building</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item gallery-video" type="button" data-type="video" data-category="interiors" data-src="assets/gallery/interior-walkthrough.mp4" data-title="Interior Walkthrough — Video" aria-label="Open video: Interior Walkthrough — Video">
+                        <video src="assets/gallery/interior-walkthrough.mp4" poster="assets/gallery/interior-walkthrough-poster.jpg" width="480" height="848" autoplay muted loop playsinline preload="metadata" aria-label="Interior walkthrough video of a completed building"></video>
+                        <span class="video-tag" aria-hidden="true"><span data-icon="play"></span> Video</span>
+                        <span class="gallery-overlay"><span><span class="tag">Interiors</span><strong>Interior Walkthrough — Video</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item gallery-video" type="button" data-type="video" data-category="" data-src="assets/gallery/new-video-compressed.mp4" data-title="Entrance Walkthrough — Video" aria-label="Open video: Entrance Walkthrough — Video">
+                        <video src="assets/gallery/new-video-compressed.mp4" poster="assets/gallery/new-video-compressed-poster.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" aria-label="Entrance and gate walkthrough video of a completed building"></video>
+                        <span class="video-tag" aria-hidden="true"><span data-icon="play"></span> Video</span>
+                        <span class="gallery-overlay"><span><span class="tag">Video</span><strong>Entrance Walkthrough — Video</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-elevation-night-render.jpg" data-title="Residential Elevation — Design" aria-label="View larger: Residential Elevation — Design">
+                        <img src="assets/gallery/residence-elevation-night-render.jpg" alt="Residential building elevation design lit at dusk" width="1024" height="775">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Residential Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/jalsa-regency-night.jpg" data-title="Jalsa Regency — Night View" aria-label="View larger: Jalsa Regency — Night View">
+                        <img src="assets/gallery/jalsa-regency-night.jpg" alt="Jalsa Regency apartment building entrance at night" width="1024" height="768">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Jalsa Regency — Night View</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/corner-building-night.jpg" data-title="Multi-storey Residence — Night View" aria-label="View larger: Multi-storey Residence — Night View">
+                        <img src="assets/gallery/corner-building-night.jpg" alt="Multi-storey corner residential building with facade lighting at night" width="1400" height="1866">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Multi-storey Residence — Night View</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-04.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-04.jpg" alt="Completed independent house with grey and blue facade" width="1080" height="1080">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential commercial" data-src="assets/gallery/mixed-use-elevation-render.jpg" data-title="Mixed-Use Building — Design" aria-label="View larger: Mixed-Use Building — Design">
+                        <img src="assets/gallery/mixed-use-elevation-render.jpg" alt="Elevation design of a building with ground-floor shops and residence above" width="959" height="1078">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Mixed-Use Building — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="interiors" data-src="assets/gallery/jalsa-regency-lobby.jpg" data-title="Jalsa Regency — Lift Lobby" aria-label="View larger: Jalsa Regency — Lift Lobby">
+                        <img src="assets/gallery/jalsa-regency-lobby.jpg" alt="Granite-clad lift lobby with Jalsa Regency lettering" width="1024" height="768">
+                        <span class="gallery-overlay"><span><span class="tag">Interiors</span><strong>Jalsa Regency — Lift Lobby</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/apartment-elevation-render-03.jpg" data-title="Apartment Elevation — Design" aria-label="View larger: Apartment Elevation — Design">
+                        <img src="assets/gallery/apartment-elevation-render-03.jpg" alt="Elevation design of a five-storey apartment building" width="958" height="1000" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Apartment Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="interiors" data-src="assets/gallery/staircase-finishes.jpg" data-title="Staircase Finishes" aria-label="View larger: Staircase Finishes">
+                        <img src="assets/gallery/staircase-finishes.jpg" alt="Staircase with granite steps and steel railings" width="768" height="1024" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Interiors</span><strong>Staircase Finishes</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-02.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-02.jpg" alt="Completed residence with white and blue facade" width="1280" height="1600" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/swimming-pool.jpg" data-title="Swimming Pool" aria-label="View larger: Swimming Pool">
+                        <img src="assets/gallery/swimming-pool.jpg" alt="Swimming pool with tiled edge and steel ladder" width="1400" height="1866" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Swimming Pool</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="layouts" data-src="assets/gallery/compound-wall-lawn.jpg" data-title="Compound Wall &amp; Lawn" aria-label="View larger: Compound Wall &amp; Lawn">
+                        <img src="assets/gallery/compound-wall-lawn.jpg" alt="Developed plot with lit compound wall and lawn" width="766" height="400" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Layouts</span><strong>Compound Wall &amp; Lawn</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-06.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-06.jpg" alt="Completed multi-storey residence with stone-clad facade" width="1400" height="1866" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="interiors" data-src="assets/gallery/corridor-finishes.jpg" data-title="Corridor Finishes" aria-label="View larger: Corridor Finishes">
+                        <img src="assets/gallery/corridor-finishes.jpg" alt="Corridor with marble flooring and wooden doors" width="768" height="1024" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Interiors</span><strong>Corridor Finishes</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/apartment-elevation-render-ameena.jpg" data-title="Apartment Elevation — Design" aria-label="View larger: Apartment Elevation — Design">
+                        <img src="assets/gallery/apartment-elevation-render-ameena.jpg" alt="Elevation design of a multi-storey apartment building" width="783" height="1600" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Apartment Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="layouts" data-src="assets/gallery/landscaped-walkway-night.jpg" data-title="Landscaped Walkway — Night" aria-label="View larger: Landscaped Walkway — Night">
+                        <img src="assets/gallery/landscaped-walkway-night.jpg" alt="Paved walkway with planters and lighting at night" width="1024" height="768" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Layouts</span><strong>Landscaped Walkway — Night</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-01.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-01.jpg" alt="Completed residence with colourful facade and ornamental gates" width="1024" height="768" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/apartment-elevation-render-01.jpg" data-title="Apartment Elevation — Design" aria-label="View larger: Apartment Elevation — Design">
+                        <img src="assets/gallery/apartment-elevation-render-01.jpg" alt="Elevation design of a narrow multi-storey residential building" width="768" height="1210" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Apartment Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/parking-floor-tiling.jpg" data-title="Stilt Floor Finishing" aria-label="View larger: Stilt Floor Finishing">
+                        <img src="assets/gallery/parking-floor-tiling.jpg" alt="Stilt parking floor with columns and new floor tiling" width="1024" height="768" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Stilt Floor Finishing</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-03.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-03.jpg" alt="Completed residence with blue and yellow facade" width="1280" height="1600" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/villa-elevation-render.jpg" data-title="Villa Elevation — Design" aria-label="View larger: Villa Elevation — Design">
+                        <img src="assets/gallery/villa-elevation-render.jpg" alt="Villa elevation design with wooden gate panels" width="739" height="415" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Villa Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="interiors" data-src="assets/gallery/granite-steps.jpg" data-title="Granite Steps" aria-label="View larger: Granite Steps">
+                        <img src="assets/gallery/granite-steps.jpg" alt="Entrance steps finished in dark granite" width="540" height="960" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Interiors</span><strong>Granite Steps</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-05.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-05.jpg" alt="Completed residence with blue facade and gates" width="1080" height="1080" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/apartment-elevation-render-02.jpg" data-title="Apartment Elevation — Design" aria-label="View larger: Apartment Elevation — Design">
+                        <img src="assets/gallery/apartment-elevation-render-02.jpg" alt="Elevation design of a tall residential building with arched balconies" width="794" height="1280" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Apartment Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/cladding-facade.jpg" data-title="Facade Cladding Work" aria-label="View larger: Facade Cladding Work">
+                        <img src="assets/gallery/cladding-facade.jpg" alt="Building with patterned facade cladding" width="1280" height="960" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Facade Cladding Work</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/jalsa-regency-night-angle.jpg" data-title="Jalsa Regency — Night View" aria-label="View larger: Jalsa Regency — Night View">
+                        <img src="assets/gallery/jalsa-regency-night-angle.jpg" alt="Jalsa Regency building photographed from a low angle at night" width="768" height="1024" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Jalsa Regency — Night View</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/residence-completed-07.jpg" data-title="Completed Residence" aria-label="View larger: Completed Residence">
+                        <img src="assets/gallery/residence-completed-07.jpg" alt="Completed residence with pink and blue facade" width="768" height="1024" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Completed Residence</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/apartment-elevation-render-04.jpg" data-title="Apartment Elevation — Design" aria-label="View larger: Apartment Elevation — Design">
+                        <img src="assets/gallery/apartment-elevation-render-04.jpg" alt="Elevation design of a multi-storey building with stone cladding" width="1156" height="1600" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Apartment Elevation — Design</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/modern-townhouse-night.jpeg" data-title="Townhouse at Night" aria-label="View larger: Townhouse at Night">
+                        <img src="assets/gallery/modern-townhouse-night.jpeg" alt="Modern townhouse illuminated at night" width="684" height="1281" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Townhouse at Night</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/basketball-court.jpeg" data-title="Outdoor Basketball Court" aria-label="View larger: Outdoor Basketball Court">
+                        <img src="assets/gallery/basketball-court.jpeg" alt="Outdoor basketball court viewed from above" width="1280" height="686" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Outdoor Basketball Court</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="" data-src="assets/gallery/aerial-swimming-pool.jpeg" data-title="Aerial Swimming Pool" aria-label="View larger: Aerial Swimming Pool">
+                        <img src="assets/gallery/aerial-swimming-pool.jpeg" alt="Aerial view of a swimming pool" width="1280" height="705" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Project</span><strong>Aerial Swimming Pool</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/ornate-gate-townhouse.png" data-title="Townhouse with Ornate Gate" aria-label="View larger: Townhouse with Ornate Gate">
+                        <img src="assets/gallery/ornate-gate-townhouse.png" alt="Modern townhouse with an ornate gate" width="1037" height="1516" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Townhouse with Ornate Gate</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="residential" data-src="assets/gallery/colorful-modern-facade.png" data-title="Colorful Modern Facade" aria-label="View larger: Colorful Modern Facade">
+                        <img src="assets/gallery/colorful-modern-facade.png" alt="Colorful modern building facade" width="1086" height="1448" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Residential</span><strong>Colorful Modern Facade</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                    <button class="gallery-item" type="button" data-category="commercial" data-src="assets/gallery/wonder-fitness-club.png" data-title="Wonder Fitness Club Facade" aria-label="View larger: Wonder Fitness Club Facade">
+                        <img src="assets/gallery/wonder-fitness-club.png" alt="Wonder Fitness Club commercial facade" width="1179" height="1334" loading="lazy">
+                        <span class="gallery-overlay"><span><span class="tag">Commercial</span><strong>Wonder Fitness Club Facade</strong></span><span class="circle-btn" aria-hidden="true"><span data-icon="zoom"></span></span></span>
+                    </button>
+                </div>
+                <p class="gallery-empty" hidden>No projects in this category yet.</p>
+            </div>
+        </section>
 
-.img-box1 {
-  width: 158px;
-  height: 280px;
-  grid-column: span 2;
-  animation: rotate 30s infinite ease-in forwards alternate;
-  transition: all 0.25s ease-in;
-  /* margin: 50px 25px; */
-  box-shadow: 0 0 10px 2px #feba00;
-  margin-left: 100px;
-}
+        <!-- CTA -->
+        <section class="cta-band" aria-labelledby="gallery-cta-title">
+            <img class="cta-bg" src="assets/about/cta-night-building.jpg" alt="" loading="lazy">
+            <div class="container cta-inner">
+                <div data-reveal>
+                    <p class="section-label">Have a Project in Mind?</p>
+                    <h2 id="gallery-cta-title"><span>Let&rsquo;s Build Something</span> <span class="text-gold">Great Together</span></h2>
+                    <p>Get in touch with us today for a free consultation and quote.</p>
+                </div>
+                <div class="cta-actions" data-reveal>
+                    <a class="btn btn-primary" href="https://wa.me/919030628100?text=Hello%20Astar%20Associates%2C%20I%27d%20like%20a%20quote%20for%20my%20project." target="_blank" rel="noopener">Get a Quote <span class="icon-arrow" data-icon="arrow-right"></span></a>
+                    <a class="btn btn-outline" href="contact.html"><span data-icon="phone"></span> Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-/* Media query for tablet */
-@media (max-width: 992px) {
-  section.new-offers {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .img-box1{
-    margin: 5px;
-  }
-}
-
-/* Media query for mobile */
-@media (max-width: 576px) {
-  section.new-offers {
-    grid-template-columns: 1fr;
-  }
-  .img-box1{
-    margin: 5px;
-  }
-}
-
-</style>
-
-<body style="background-color:#fdf4dc">
-
-  <header class="header">
-    <!-- <a class="navbar-brand logo" href="#">
-      <img src="images/bellecosmetic-01.png" width="50" height="50" class="d-inline-block align-text-top" alt="">
-      Belle Cosmetic
-    </a> -->
-  
-    <div class="container-fluid">
-      <a class="navbar-brand logo" href="index.html">
-        <img src="images1/new-logo-final.svg" alt=""  class="d-inline-block align-text-top">
-  
-      </a>
-     
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project viewer" aria-hidden="true">
+        <button class="lightbox-btn lightbox-close" type="button" aria-label="Close viewer"><span data-icon="close"></span></button>
+        <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous item"><span data-icon="chevron-left"></span></button>
+        <button class="lightbox-btn lightbox-next" type="button" aria-label="Next item"><span data-icon="chevron-right"></span></button>
+        <figure class="lightbox-figure">
+            <div class="lightbox-media"></div>
+            <figcaption class="lightbox-caption">
+                <span class="lightbox-counter"></span>
+                <span class="lightbox-title"></span>
+            </figcaption>
+        </figure>
     </div>
-  
-     <i class='bx bx-menu' id="menu-icon"></i>
-  
-  
-              <!-- <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a id="drpbtn" href="services.html">Services</a>
-                <a href="offers.html">Offers</a>
-                <a href="contact.html">Contact</a>
-                <a href="#" id="arabic">العربية</a>
-          
-                <a href="" class="btn" style="color: #fff; font-size: 12px; padding: 8px;">Book Your Consultation</a>
-              </nav> -->
-  
-  
-              
-  <nav class="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    
-    <!-- Wrap the Services link in a dropdown container -->
-    <!-- <div class="dropdown">
-      <a id="drpbtn" href="services.html">Services <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-      <div class="dropdown-content">
-        <a href="services.html">Botox</a>
-        <a href="services.html">Fillers<i class="fa-sharp fa-solid fa-caret-down"></i></a>
-        <a href="services.html">Fine Thread Lifting</a>
-        <a href="services.html">Beauty Therapies</a>
-        <a href="services.html">Dermatological Treatments</a>
-        <a href="services.html">Hair Laser Removal Treatment</a>
-        <a href="services.html">Body Treatments</a>
-        <a href="services.html">Hair Re-Growth Treatment</a>
-      </div>
-    </div> -->
-    <a href="our-team.html">Our Team</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <!-- <a href="#" id="arabic">العربية</a> -->
-    <!-- <a href="https://wa.me/+919030628100" class="btn" style="color: #fff; font-size: 10px;">Book Your Consultation</a> -->
-  
-  </nav>
-    </header> 
-  
-  <h2 class="heading" style="margin-top: 180px;"><span>Gallery</span></h2>
 
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <a class="footer-brand" href="index.html" aria-label="Astar Associates home">
+                <img src="assets/logo/astar-associates-logo.png" alt="Astar Associates — A Complete Construction Revolution" width="335" height="64" loading="lazy">
+            </a>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <ul class="social-list">
+                <li><a href="https://www.instagram.com/astar_associates?igsh=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Astar Associates on Instagram"><span data-icon="instagram"></span></a></li>
+                <li><a href="https://wa.me/919030628100" target="_blank" rel="noopener" aria-label="Chat with Astar Associates on WhatsApp"><span data-icon="whatsapp"></span></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span data-year>2025</span> Astar Associates. All rights reserved.</p>
+                <div class="footer-contact">
+                    <a href="tel:+919030628100"><span data-icon="phone"></span>+91 9030628100</a>
+                    <a href="mailto:astarassociates@yahoo.in"><span data-icon="mail"></span>astarassociates@yahoo.in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
-
-
-<section class="new-offers">
-
-  <div class="img-box">
-    <img src="images1/new-img1.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img2.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img3.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img4.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img5.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img6.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img9.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img8.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img10.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img11.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img12.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img13.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img14.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img15.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img16.jpeg" alt="">
-  </div>
-
-  <div class="img-box">
-    <img src="images1/new-img7.jpeg"  alt="">
-  </div>
-
-
-  <div class="img-box1">
-    <video src="images1/video1.mp4" autoplay loop controls muted height="280px" width=""></video>
-  </div>
-
-  <div class="img-box2">
-    <video class="video" src="images1/new-video-compressed.mp4" autoplay loop controls muted height="280px" width=""></video>
-  </div>
- 
-
-</section>
-
-
-
-
-
-
-<a href="https://wa.me/+919030628100"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a>
-
-
-
-    
-<section1  id="footer">
-  <div class="main-footer">
-    <div class="logoinfo" data-aos="fade-up">
-      <div class="contact-details">
-        <h1>Contact Us</h1>
-        <li>
-          <div class="fa-solid fa-phone"></div><a href="tel:+919030628100" style="padding-left: 15px;">+91 9030628100</a></li>
-        <li>
-          <div class="fa-solid fa-envelope"></div><a href="astarassociates@yahoo.in" style="padding-left: 15px ;">astarassociates@yahoo.in</a></li>
-          <li>
-            <div class="fa-solid fa-location-dot"></div><a href="https://maps.app.goo.gl/WzbTyS68XJaE9fzK7"  style="padding-left: 15px;">East Maruti Nagar, Hyderabad.</a></li>
-        
-    </div>
-  </div>
-  <div class="com " data-aos="fade-up">
-    <h1>About</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="our-team.html">Our Team</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  <div class="info" data-aos="fade-up">
-    <h1>Social Media</h1>
-    <div class="sociallogos">
-      <div class="logobox social-media">
-        <a href="https://www.instagram.com/astar_associates?igsh=NTc4MTIwNjQ2YQ==" class="fa fa-instagram"></a>
-        <!-- <a href="#" class="bx bxl-facebook-circle"></a> -->
-        <!-- <a href="#" class="fa-brands fa-threads"></a> -->
-        <a href="https://wa.me/+919030628100" class="fa-brands fa-whatsapp"></a>
-      </div>
-    </div>
-  </div>
-  </div>
-<footer>Copyrights &copy; 2024 by Astar Associates | All Rights Reserved | <br> <a href=""></a></footer>
-</section1>
-
-
-    <!-- scroll revial -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- typed js -->
-
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- script section -->
-    <script src="script.js"></script>
-
-    <script>
-      $(".slider").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 2000, //2000ms = 2s;
-        autoplayHoverPause: true,
-      });
-    </script>
-
-</body> 
+    <a class="whatsapp-float" href="https://wa.me/919030628100" target="_blank" rel="noopener" aria-label="Chat with Astar Associates on WhatsApp"><span data-icon="whatsapp"></span></a>
+</body>
 </html>
