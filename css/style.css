@@ -378,17 +378,51 @@ h4 {
 
 .brand {
     display: inline-flex;
+    align-items: center;
     flex-shrink: 0;
+    gap: 7px;
+    padding: 5px 10px;
+    line-height: 0;
+    background: #000;
+    border: 1px solid rgba(255, 196, 0, .45);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
 }
 
 .brand img {
+    display: block;
     width: auto;
-    height: 46px;
     transition: height 0.35s var(--ease);
 }
 
-.site-header.is-scrolled .brand img {
-    height: 40px;
+.brand .brand-icon {
+    height: 42px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand .brand-title {
+    height: 27px;
+}
+
+.brand-tagline {
+    width: 0;
+    min-width: 100%;
+    margin-top: 4px;
+    padding-left: 3px;
+    color: #fff;
+    font-family: var(--font);
+    font-size: 7.5px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: justify;
+    text-align-last: justify;
 }
 
 .main-nav {
@@ -2140,8 +2174,21 @@ body.lightbox-open {
         --header-h: 68px;
     }
 
-    .brand img {
-        height: 40px;
+    .brand {
+        padding: 4px 8px;
+    }
+
+    .brand .brand-icon {
+        height: 38px;
+    }
+
+    .brand .brand-title {
+        height: 25px;
+    }
+
+    .brand-tagline {
+        margin-top: 4px;
+        font-size: 7px;
     }
 
     .nav-toggle {
@@ -2405,8 +2452,24 @@ body.lightbox-open {
         margin-left: auto;
     }
 
-    .brand img {
-        height: 36px;
+    .brand {
+        padding: 4px 7px;
+        border-radius: 8px;
+    }
+
+    .brand .brand-icon {
+        height: 34px;
+    }
+
+    .brand .brand-title {
+        height: 22px;
+    }
+
+    .brand-tagline {
+        margin-top: 3px;
+        padding-left: 2px;
+        font-size: 6.2px;
+        letter-spacing: .04em;
     }
 
     .hero-actions {
@@ -2551,4 +2614,101 @@ body.lightbox-open {
         width: 52px;
         height: 52px;
     }
+}
+
+/* BRAND INTRO LOADER */
+.js .site-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, rgba(179, 125, 12, .09), transparent 42%), #050607;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .75s ease, visibility .75s ease;
+}
+
+.js .site-loader.is-dismissed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    display: flex;
+    width: min(84vw, 380px);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.loader-kicker {
+    color: #e7b52f;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .32em;
+    line-height: 1;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: loader-fade-in .7s .2s ease forwards;
+}
+
+.loader-stroke {
+    width: min(58vw, 230px);
+    height: 2px;
+    margin: 20px 0 16px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    background: linear-gradient(90deg, #f8c52f, #a87910 80%, transparent);
+    box-shadow: 0 0 12px rgba(248, 197, 47, .55);
+    animation: loader-stroke-in .9s .55s cubic-bezier(.2,.75,.25,1) forwards;
+}
+
+.loader-wordmark {
+    display: block;
+    width: min(68vw, 310px);
+    height: auto;
+    clip-path: inset(0 100% 0 0);
+    animation: loader-wordmark-in 1.55s 1.25s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.loader-tagline {
+    margin-top: 10px;
+    color: rgba(255,255,255,.78);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: loader-fade-in .7s 2.75s ease forwards;
+}
+
+@keyframes loader-fade-in {
+    to { opacity: 1; }
+}
+
+@keyframes loader-stroke-in {
+    to { transform: scaleX(1); }
+}
+
+@keyframes loader-wordmark-in {
+    to { clip-path: inset(0 0 0 0); }
+}
+
+@media (max-width: 560px) {
+    .loader-content { width: 86vw; }
+    .loader-kicker { font-size: 10px; }
+    .loader-wordmark { width: min(72vw, 270px); }
+    .loader-tagline { font-size: 8px; letter-spacing: .16em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-kicker, .loader-stroke, .loader-wordmark, .loader-tagline {
+        animation-duration: .01ms;
+        animation-delay: 0ms;
+    }
+    .js .site-loader { transition-duration: .15s; }
 }

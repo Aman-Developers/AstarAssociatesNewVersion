@@ -551,7 +551,28 @@
         });
     }
 
+    function initSiteLoader() {
+        var loader = document.querySelector("[data-site-loader]");
+        if (!loader) return;
+
+        var alreadyShown = false;
+        try {
+            alreadyShown = sessionStorage.getItem("astarHomeIntroSeenV2") === "1";
+            sessionStorage.setItem("astarHomeIntroSeenV2", "1");
+        } catch (error) { /* Continue with the intro when storage is unavailable. */ }
+
+        if (alreadyShown) {
+            loader.classList.add("is-dismissed");
+            return;
+        }
+
+        window.setTimeout(function () {
+            loader.classList.add("is-dismissed");
+        }, 3800);
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
+        initSiteLoader();
         renderIcons();
         initHeader();
         initActiveNav();
